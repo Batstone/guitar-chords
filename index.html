@@ -71,41 +71,27 @@
         </div>
     </section>
 
-    <section class="chord-section">
 
-        <section class="chord-selection">
-            <div class="current-chord-container wrapper">
-                <h2>Select A Chord</h2>
-            </div>
-            <div class="audio">
-                <button class="audio-button">
-                    PLAY
-                </button>
+    <section class="select-chord-section wrapper">
 
-            </div>
-
-
-
-        </section>
-
-        <div class="chord-selector-buttons wrapper">
-            <ul>
-                <li class="chord-selector"><button>E</button></li>
-                <li class="chord-selector"><button>A</button></li>
-                <li class="chord-selector"><button>D</button></li>
-                <li class="chord-selector"><button>G</button></li>
-                <li class="chord-selector"><button>C</button></li>
-                <li class="chord-selector"><button>Am</button></li>
-                <li class="chord-selector"><button>B</button></li>
-                <li class="chord-selector"><button>Bm</button></li>
-                <li class="chord-selector"><button>F#m</button></li>
-                <li class="chord-selector"><button>A</button></li>
-            </ul>
+        <div class="form-container">
+            <form action="">
+                <label for="chord">Choose your Chord</label>
+                <select name="chord" id="chord">
+                    // dynamically populate options
+                </select>
+            </form>
         </div>
 
+        <div class="audio-container">
+            <h2 id="page-title">Click below to hear the chord, or hover over the strings to hear the individual
+                notes<span></span></h2>
+            <button class="audio-button">
+                PLAY
+            </button>
+        </div>
 
     </section>
-
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
