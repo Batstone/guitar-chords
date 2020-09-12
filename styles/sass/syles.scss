@@ -22,7 +22,7 @@ body {
    }
 
    h2 {
-       font-size: 25px;
+       font-size: 35px;
        font-weight: bold;
    }
 
@@ -30,6 +30,10 @@ body {
     font-size: 50px;
     margin-top: 15px;
     color: white;
+}
+
+p {
+    font-size: 23px;
 }
 
 header {
@@ -269,7 +273,7 @@ form {
     display: flex;
     flex-direction: column;
     label {
-        font-size: 25px;
+        font-size: 35px;
         font-weight: bold;;
     }
     select {
@@ -282,11 +286,13 @@ form {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 50%;
+    margin-left: 10px;
 }
 
 .audio-button {
     background-color: rgb(230, 226, 222);
-    font-size: 35px;
+    font-size: 25px;
     width: 150px;
     height: 150px;
     margin: 30px;
