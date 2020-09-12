@@ -277,7 +277,7 @@ const chordShape = [
         chordName: 'F#major7',
         fingering: [[0, 1, 0, 0], [0, 1, 0, 0], [0, 0, 3, 0], [0, 0, 2, 0], [0, 0, 0, 4], [0, 1, 0, 0]],
         openStrings: [1, 1, 1, 1, 1, 1],
-        chordAudio: './audio/chords/F#major7.mp3',
+        chordAudio: './audio/chords/Fsharpmajor7.mp3',
         stringAudio: ['./audio/notes/Fsharp-1.mp3', './audio/notes/Csharp-2.mp3', './audio/notes/Asharp-3.mp3', './audio/notes/F-4.mp3', './audio/notes/Csharp-5.mp3', './audio/notes/Fsharp-6.mp3']
     },
     {
@@ -356,30 +356,55 @@ const fingersOnDOM = (chord) => {
     fingerInput(chord.fingering[5], 6)
 }
 
+let strumAudio
+let noteAudio
+
 const chordAudio = (chord) => {
 
-    strumAudio = new Audio(chord.chordAudio);
 
-    strumAudio.play();
+    if (typeof (strumAudio != 'object')) {
+        strumAudio = document.createElement('audio');
+
+        strumAudio.addEventListener('loadeddata', () => {
+            strumAudio.play();
+        })
+    }
+
+    strumAudio.setAttribute('src', chord.chordAudio)
 };
 
 const stringAudio = (string) => {
-    const noteAudio = new Audio(string)
 
-    noteAudio.play();
+    if (typeof (stringAudio != 'object')) {
+        noteAudio = document.createElement('audio');
+
+        noteAudio.addEventListener('loadeddata', () => {
+            noteAudio.play();
+        })
+    }
+
+    noteAudio.setAttribute('src', string);
 };
 
 $(function () {
 
     populateForm();
 
-    // Delegated event handler on the <li> elements
-    $('#chord').on('change', function (e) {
-        // Get the value of the selected chord, ie. 'C', 'G', 'Am' etc...
-        const chordSelected = $(this).val();
+    let chordSelected
+
+    $(document).keypress(function (e) {
+
+        const selected = chordShape.findIndex((chord) => {
+            return chord.chordName.charAt(0).toLowerCase() === String.fromCharCode(e.keyCode)
+        })
+
+        chordSelected = chordShape[selected].chordName
 
         // Updated the DOM to display the chord selected in the text container
-        $('.audio-button').html(`${chordSelected}`)
+        $('.audio-button').html(`${chordSelected}`).on('click', function (e) {
+            // Updating the play button with the correct chord audio
+            chordAudio(chordShape[chordSelection])
+        })
 
         // Find the index of the selected chord in the chordShape array
         const chordSelection = chordShape.findIndex((chord) => {
@@ -389,12 +414,52 @@ $(function () {
         // Calling fingersonDOM function on the specific item in the chordShape array to display the fingering on the fretboard
         fingersOnDOM(chordShape[chordSelection])
 
-
-        $('.audio-button').on('click', function (e) {
-            // Updating the play button with the correct chord audio
-            chordAudio(chordShape[chordSelection])
-
+        // Updating each string with the respective note in each chord
+        $('.string-1').on('mouseenter', function (e) {
+            stringAudio(chordShape[chordSelection].stringAudio[0])
         })
+        $('.string-2').on('mouseenter', function (e) {
+            stringAudio(chordShape[chordSelection].stringAudio[1])
+        })
+        $('.string-3').on('mouseenter', function (e) {
+            stringAudio(chordShape[chordSelection].stringAudio[2])
+        })
+        $('.string-4').on('mouseenter', function (e) {
+            stringAudio(chordShape[chordSelection].stringAudio[3])
+        })
+        $('.string-5').on('mouseenter', function (e) {
+            stringAudio(chordShape[chordSelection].stringAudio[4])
+        })
+        $('.string-6').on('mouseenter', function (e) {
+            stringAudio(chordShape[chordSelection].stringAudio[5])
+        })
+
+
+
+    })
+
+
+
+    // Delegated event handler on the <li> elements
+    $('#chord').on('change', function (e) {
+        // Get the value of the selected chord, ie. 'C', 'G', 'Am' etc...
+        let chordSelected = $(this).val();
+
+
+        // Updated the DOM to display the chord selected in the text container
+        $('.audio-button').html(`${chordSelected}`).on('click', function (e) {
+            // Updating the play button with the correct chord audio
+            e.preventDefault()
+            chordAudio(chordShape[chordSelection])
+        })
+
+        // Find the index of the selected chord in the chordShape array
+        const chordSelection = chordShape.findIndex((chord) => {
+            return chordSelected === chord.chordName
+        })
+
+        // Calling fingersonDOM function on the specific item in the chordShape array to display the fingering on the fretboard
+        fingersOnDOM(chordShape[chordSelection])
 
         // Updating each string with the respective note in each chord
         $('.string-1').on('mouseenter', function (e) {

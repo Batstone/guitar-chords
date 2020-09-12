@@ -654,7 +654,7 @@ header h1::after {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  margin: 50px 100px;
+  margin: 50px auto;
 }
 
 form {
