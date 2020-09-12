@@ -400,6 +400,8 @@ $(function () {
 
         chordSelected = chordShape[selected].chordName
 
+        $('#chord').val(chordSelected)
+
         // Updated the DOM to display the chord selected in the text container
         $('.audio-button').html(`${chordSelected}`).on('click', function (e) {
             // Updating the play button with the correct chord audio
@@ -438,9 +440,7 @@ $(function () {
 
     })
 
-
-
-    // Delegated event handler on the <li> elements
+    // Event listener on the dropdown menu
     $('#chord').on('change', function (e) {
         // Get the value of the selected chord, ie. 'C', 'G', 'Am' etc...
         let chordSelected = $(this).val();
