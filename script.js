@@ -7,16 +7,16 @@ const chordShape = [
     },
     {
         chordName: 'Emajor',
-        // Each nested array represnts a string with four frets. The index of each array indicates the fret, and the number indicates which left hand finger should be used in that fret. The first nested array is the first (highest) string, the last is the sixth (lowest) string.
+        // Each nested array represnts a string with four frets. The index of each array indicates the fret, and the number inside indicates which left hand finger should be used in that fret. The first nested array is the first (highest) string, the last is the sixth (lowest) string
         fingering: [[0, 0, 0, 0], [0, 0, 0, 0], [1, 0, 0, 0], [0, 3, 0, 0], [0, 2, 0, 0], [0, 0, 0, 0]],
 
-        // The six open strings, indicating which should be included in each chord. The 0 denotes that the string should be left open, the 1 means there is a fretted note so no open string, the -1 means it should be muted and not included in the chord.
+        // The six open strings, indicating which open string should be included in each chord. The 0 denotes that the string should be left open, 1 indicates there is a fretted note so the string should not be left open, the -1 means it should be muted and not included in the chord
         openStrings: [0, 0, 1, 1, 1, 0],
 
-        // The sound of the full chord strummed. This audio is triggered by the 'play' button.
+        // The sound of the full chord strummed. This audio is triggered by the '.audio-button'
         chordAudio: './audio/chords/Emajor.mp3',
 
-        // The sound of each individual note of the chord. This audio is triggered by moving the mouse over each individual string once a chord is selected.
+        // The sound of each individual note of the chord. This audio is triggered by moving the mouse over each individual string once a chord is selected
         stringAudio: ['./audio/notes/E-1.mp3', './audio/notes/B-2.mp3', './audio/notes/Gsharp-3.mp3', './audio/notes/E-4.mp3', './audio/notes/B-5.mp3', './audio/notes/E-6.mp3']
     },
     {
@@ -296,6 +296,7 @@ const chordShape = [
     },
 ]
 
+// Function used to populate the dropdown menu with the chord selection options
 const populateForm = () => {
 
     chordShape.forEach((chord) => {
@@ -307,13 +308,12 @@ const populateForm = () => {
 };
 
 // Function for clearing the fingering on the fretboard
-const clearFingerInput = (string, stringNumber, openStrings) => {
+const clearFingerInput = (string, stringNumber) => {
 
     $.each(string, function (index, note) {
         $(`.string-${stringNumber}-${index + 1}`).css('visibility', 'hidden');
     });
-
-}
+};
 
 // Function for inputing fingering on the fretboard
 const fingerInput = (string, stringNumber) => {
@@ -323,7 +323,6 @@ const fingerInput = (string, stringNumber) => {
             $(`.string-${stringNumber}-${index + 1}`).css('visibility', 'visible').text(note);
         }
     });
-
 };
 
 // Function that calls the clear DOM and update DOM functions with each string
@@ -358,7 +357,6 @@ const fingersOnDOM = (chord) => {
 let strumAudio
 let noteAudio
 
-
 const chordAudio = (chord) => {
 
     if (typeof (strumAudio != 'object')) {
@@ -385,30 +383,50 @@ const stringAudio = (string) => {
     noteAudio.setAttribute('src', string);
 };
 
+const stringColor = (string) => {
+
+    const originalStringColor = $(string).css('background')
+
+    $(string).css('background', '#449DD1')
+
+    setTimeout(() => {
+        $(string).css('background', originalStringColor)
+    }, 300)
+
+}
+
+
 $(function () {
 
-    // String array
+    // Calling the populate from function to populate the dropdown menu with all the possible chords.
+    populateForm();
+
     const guitarStrings = [];
 
+    // For loop to populate the guitarStrings array with the class names of the six strings.
     for (let i = 1; i <= 6; i++) {
         guitarStrings.push(`.string-${i}`)
     };
-
-    // Calling the populate from function to populate the dropdown menu with all the possible chords
-    populateForm();
 
     let chordSelected
 
     $(document).keypress(function (e) {
 
-        // This allows the user to press a key ie. 'g' on the keyboard to trigger different chords. It takes the keycode after it has been converted to a string and matches its index in the chordShape array
+        // This allows the user to press a key ie. 'g' on the keyboard to trigger different chords. It takes the keycode of each keypress, converts it to a string and matches its index with a value in the chordShape array.
         const selected = chordShape.findIndex((chord) => {
             return chord.chordName.charAt(0).toLowerCase() === String.fromCharCode(e.keyCode)
         })
 
+        // Using the index number that was matched above, we get the value of the specific chord in the chordShape array
         chordSelected = chordShape[selected].chordName
 
+        // Updating the dropdown form with the current selection
         $('#chord').val(chordSelected)
+
+        // Find the index of the selected chord in the chordShape array
+        const chordSelection = chordShape.findIndex((chord) => {
+            return chordSelected === chord.chordName
+        })
 
         // Updated the DOM to display the chord selected in the text container
         $('.audio-button').html(`${chordSelected}`).on('click', function (e) {
@@ -416,20 +434,21 @@ $(function () {
             chordAudio(chordShape[chordSelection])
         })
 
-        // Find the index of the selected chord in the chordShape array
-        const chordSelection = chordShape.findIndex((chord) => {
-            return chordSelected === chord.chordName
-        })
+
 
         // Calling fingersonDOM function on the specific item in the chordShape array to display the fingering on the fretboard
         fingersOnDOM(chordShape[chordSelection])
 
+        // Creating an event listener on each string, using the guitarStrings array of class names, then calling the audio file for each string
         guitarStrings.forEach((string, index) => {
+
             $(string).on('mouseenter', function (e) {
+
+                stringColor(string)
                 stringAudio(chordShape[chordSelection].stringAudio[index])
+
             })
         })
-
     })
 
     // Event listener on the dropdown menu
@@ -439,8 +458,7 @@ $(function () {
 
         // Updated the DOM to display the chord selected in the text container
         $('.audio-button').html(`${chordSelected}`).on('click', function (e) {
-            // Updating the play button with the correct chord audio
-            e.preventDefault()
+            // Updating the play button with the correct chord audi
             chordAudio(chordShape[chordSelection])
         })
 
@@ -452,12 +470,17 @@ $(function () {
         // Calling fingersonDOM function on the specific item in the chordShape array to display the fingering on the fretboard
         fingersOnDOM(chordShape[chordSelection])
 
-        // Creating an event listener on each string, using the guitarStrings array of class names, then calling the audio file for each string
         guitarStrings.forEach((string, index) => {
+
             $(string).on('mouseenter', function (e) {
+
+                stringColor(string)
                 stringAudio(chordShape[chordSelection].stringAudio[index])
+
             });
         });
+
+
     });
 
 });
