@@ -313,13 +313,10 @@ const clearFingerInput = (string, stringNumber, openStrings) => {
         $(`.string-${stringNumber}-${index + 1}`).css('visibility', 'hidden');
     });
 
-    $.each(openStrings, function (index, note) {
-        $(`.string-${index + 1}-0`).css({ 'visibility': 'hidden', 'color': 'black' });
-    })
 }
 
 // Function for inputing fingering on the fretboard
-const fingerInput = (string, stringNumber, openStrings) => {
+const fingerInput = (string, stringNumber) => {
 
     $.each(string, function (index, note) {
         if (note !== 0) {
@@ -327,40 +324,42 @@ const fingerInput = (string, stringNumber, openStrings) => {
         }
     });
 
-    $.each(openStrings, function (index, note) {
+};
+
+// Function that calls the clear DOM and update DOM functions with each string
+const fingersOnDOM = (chord) => {
+
+    // Clear the fretboard/DOM fingering before updating it with the new fingering
+    chord.fingering.forEach((string, index) => {
+        clearFingerInput(string, index + 1)
+    })
+
+    // Clearing the open string indications
+    chord.openStrings.forEach((note, index) => {
+        $(`.string-${index + 1}-0`).css({ 'visibility': 'hidden', 'color': 'black' });
+    });
+
+    // Calling the fingerInput function for each string
+    chord.fingering.forEach((string, index) => {
+        fingerInput(string, index + 1)
+    })
+
+    // Populating the DOM with the correct open string indications
+    chord.openStrings.forEach((note, index) => {
         if (note === 0) {
             $(`.string-${index + 1}-0`).css('visibility', 'visible').text('O')
         } else if (note === -1) {
             $(`.string-${index + 1}-0`).css({ 'visibility': 'visible', 'color': 'red' }).text('X')
         }
-    })
-}
+    });
 
-// Function that calls the clear DOM and update DOM functions with each string.
-const fingersOnDOM = (chord) => {
-
-    // Clear the fretboard/DOM fingering, one call for each string, including clearing the openString indicators on the initial call.
-    clearFingerInput(chord.fingering[0], 1, chord.openStrings)
-    clearFingerInput(chord.fingering[1], 2)
-    clearFingerInput(chord.fingering[2], 3)
-    clearFingerInput(chord.fingering[3], 4)
-    clearFingerInput(chord.fingering[4], 5)
-    clearFingerInput(chord.fingering[5], 6)
-
-    // Update the fretboard/DOM with the new fingering. The fingerInput function is called once for each string, including the openString indicators on the inital call.
-    fingerInput(chord.fingering[0], 1, chord.openStrings)
-    fingerInput(chord.fingering[1], 2)
-    fingerInput(chord.fingering[2], 3)
-    fingerInput(chord.fingering[3], 4)
-    fingerInput(chord.fingering[4], 5)
-    fingerInput(chord.fingering[5], 6)
-}
+};
 
 let strumAudio
 let noteAudio
 
-const chordAudio = (chord) => {
 
+const chordAudio = (chord) => {
 
     if (typeof (strumAudio != 'object')) {
         strumAudio = document.createElement('audio');
@@ -388,12 +387,21 @@ const stringAudio = (string) => {
 
 $(function () {
 
+    // String array
+    const guitarStrings = [];
+
+    for (let i = 1; i <= 6; i++) {
+        guitarStrings.push(`.string-${i}`)
+    };
+
+    // Calling the populate from function to populate the dropdown menu with all the possible chords
     populateForm();
 
     let chordSelected
 
     $(document).keypress(function (e) {
 
+        // This allows the user to press a key ie. 'g' on the keyboard to trigger different chords. It takes the keycode after it has been converted to a string and matches its index in the chordShape array
         const selected = chordShape.findIndex((chord) => {
             return chord.chordName.charAt(0).toLowerCase() === String.fromCharCode(e.keyCode)
         })
@@ -416,27 +424,11 @@ $(function () {
         // Calling fingersonDOM function on the specific item in the chordShape array to display the fingering on the fretboard
         fingersOnDOM(chordShape[chordSelection])
 
-        // Updating each string with the respective note in each chord
-        $('.string-1').on('mouseenter', function (e) {
-            stringAudio(chordShape[chordSelection].stringAudio[0])
+        guitarStrings.forEach((string, index) => {
+            $(string).on('mouseenter', function (e) {
+                stringAudio(chordShape[chordSelection].stringAudio[index])
+            })
         })
-        $('.string-2').on('mouseenter', function (e) {
-            stringAudio(chordShape[chordSelection].stringAudio[1])
-        })
-        $('.string-3').on('mouseenter', function (e) {
-            stringAudio(chordShape[chordSelection].stringAudio[2])
-        })
-        $('.string-4').on('mouseenter', function (e) {
-            stringAudio(chordShape[chordSelection].stringAudio[3])
-        })
-        $('.string-5').on('mouseenter', function (e) {
-            stringAudio(chordShape[chordSelection].stringAudio[4])
-        })
-        $('.string-6').on('mouseenter', function (e) {
-            stringAudio(chordShape[chordSelection].stringAudio[5])
-        })
-
-
 
     })
 
@@ -444,7 +436,6 @@ $(function () {
     $('#chord').on('change', function (e) {
         // Get the value of the selected chord, ie. 'C', 'G', 'Am' etc...
         let chordSelected = $(this).val();
-
 
         // Updated the DOM to display the chord selected in the text container
         $('.audio-button').html(`${chordSelected}`).on('click', function (e) {
@@ -461,27 +452,12 @@ $(function () {
         // Calling fingersonDOM function on the specific item in the chordShape array to display the fingering on the fretboard
         fingersOnDOM(chordShape[chordSelection])
 
-        // Updating each string with the respective note in each chord
-        $('.string-1').on('mouseenter', function (e) {
-            stringAudio(chordShape[chordSelection].stringAudio[0])
-        })
-        $('.string-2').on('mouseenter', function (e) {
-            stringAudio(chordShape[chordSelection].stringAudio[1])
-        })
-        $('.string-3').on('mouseenter', function (e) {
-            stringAudio(chordShape[chordSelection].stringAudio[2])
-        })
-        $('.string-4').on('mouseenter', function (e) {
-            stringAudio(chordShape[chordSelection].stringAudio[3])
-        })
-        $('.string-5').on('mouseenter', function (e) {
-            stringAudio(chordShape[chordSelection].stringAudio[4])
-        })
-        $('.string-6').on('mouseenter', function (e) {
-            stringAudio(chordShape[chordSelection].stringAudio[5])
-        })
-
+        // Creating an event listener on each string, using the guitarStrings array of class names, then calling the audio file for each string
+        guitarStrings.forEach((string, index) => {
+            $(string).on('mouseenter', function (e) {
+                stringAudio(chordShape[chordSelection].stringAudio[index])
+            });
+        });
     });
-
 
 });
