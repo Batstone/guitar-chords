@@ -20,232 +20,266 @@ guitarApp.chordData = [
         chordAudio: './audio/chords/Emajor.mp3',
 
         // The sound of each individual note of the chord. This audio is triggered by moving the mouse over each individual string once a chord is selected
-        stringAudio: ['./audio/notes/E-1.mp3', './audio/notes/B-2.mp3', './audio/notes/Gsharp-3.mp3', './audio/notes/E-4.mp3', './audio/notes/B-5.mp3', './audio/notes/E-6.mp3']
+        stringAudio: ['./audio/notes/E-1.mp3', './audio/notes/B-2.mp3', './audio/notes/Gsharp-3.mp3', './audio/notes/E-4.mp3', './audio/notes/B-5.mp3', './audio/notes/E-6.mp3'],
+
+        // The chordDescription text is used for screen readers only.
+        chordDescription: 'sixth string open, fifth string second finger second fret, fourth string third finger second fret, third string first finger first fret, second string open, first string open'
     },
     {
         chordName: 'E minor',
         fingering: [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 3, 0, 0], [0, 2, 0, 0], [0, 0, 0, 0]],
         openStrings: [0, 0, 0, 1, 1, 0],
         chordAudio: './audio/chords/Eminor.mp3',
-        stringAudio: ['./audio/notes/E-1.mp3', './audio/notes/B-2.mp3', './audio/notes/G-3.mp3', './audio/notes/E-4.mp3', './audio/notes/B-5.mp3', './audio/notes/E-6.mp3']
+        stringAudio: ['./audio/notes/E-1.mp3', './audio/notes/B-2.mp3', './audio/notes/G-3.mp3', './audio/notes/E-4.mp3', './audio/notes/B-5.mp3', './audio/notes/E-6.mp3'],
+        chordDescription: 'sixth string open, fifth string second finger second fret, fourth string third finger second fret, third string open, second string open, first string open'
     },
     {
         chordName: 'E major7',
         fingering: [[0, 0, 0, 0], [0, 0, 0, 0], [2, 0, 0, 0], [1, 0, 0, 0], [0, 3, 0, 0], [0, 0, 0, 0]],
         openStrings: [0, 0, 1, 1, 1, 0],
         chordAudio: './audio/chords/Emajor7.mp3',
-        stringAudio: ['./audio/notes/E-1.mp3', './audio/notes/B-2.mp3', './audio/notes/Gsharp-3.mp3', './audio/notes/Dsharp-4.mp3', './audio/notes/B-5.mp3', './audio/notes/E-6.mp3']
+        stringAudio: ['./audio/notes/E-1.mp3', './audio/notes/B-2.mp3', './audio/notes/Gsharp-3.mp3', './audio/notes/Dsharp-4.mp3', './audio/notes/B-5.mp3', './audio/notes/E-6.mp3'],
+        chordDescription: 'sixth string open, fifth string third finger second fret, fourth string first finger first fret, third string second finger first fret, second string open, first string open'
     },
     {
         chordName: 'E 7',
         fingering: [[0, 0, 0, 0], [0, 0, 0, 0], [1, 0, 0, 0], [0, 0, 0, 0], [0, 2, 0, 0], [0, 0, 0, 0]],
         openStrings: [0, 0, 1, 0, 1, 0],
         chordAudio: './audio/chords/E7.mp3',
-        stringAudio: ['./audio/notes/E-1.mp3', './audio/notes/B-2.mp3', './audio/notes/Gsharp-3.mp3', './audio/notes/D-4.mp3', './audio/notes/B-5.mp3', './audio/notes/E-6.mp3']
+        stringAudio: ['./audio/notes/E-1.mp3', './audio/notes/B-2.mp3', './audio/notes/Gsharp-3.mp3', './audio/notes/D-4.mp3', './audio/notes/B-5.mp3', './audio/notes/E-6.mp3'],
+        chordDescription: 'sixth string open, fifth string second finger second fret, fourth string open, third string first finger first fret, second string open, first string open'
     },
     {
         chordName: 'E minor7',
         fingering: [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 1, 0, 0], [0, 0, 0, 0]],
         openStrings: [0, 0, 0, 0, 0, 0],
         chordAudio: './audio/chords/Eminor7.mp3',
-        stringAudio: ['./audio/notes/E-1.mp3', './audio/notes/B-2.mp3', './audio/notes/G-3.mp3', './audio/notes/D-4.mp3', './audio/notes/B-5.mp3', './audio/notes/E-6.mp3']
+        stringAudio: ['./audio/notes/E-1.mp3', './audio/notes/B-2.mp3', './audio/notes/G-3.mp3', './audio/notes/D-4.mp3', './audio/notes/B-5.mp3', './audio/notes/E-6.mp3'],
+        chordDescription: 'sixth string open, fifth string second finger second fret, fourth string open, third string open, second string open, first string open'
     },
     {
         chordName: 'A major',
         fingering: [[0, 0, 0, 0], [0, 4, 0, 0], [0, 3, 0, 0], [0, 2, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]],
         openStrings: [0, 1, 1, 1, 0, -1],
         chordAudio: './audio/chords/Amajor.mp3',
-        stringAudio: ['./audio/notes/E-1.mp3', './audio/notes/Csharp-2.mp3', './audio/notes/A-3.mp3', './audio/notes/E-4.mp3', './audio/notes/A-5.mp3', './audio/notes/empty.mp3']
+        stringAudio: ['./audio/notes/E-1.mp3', './audio/notes/Csharp-2.mp3', './audio/notes/A-3.mp3', './audio/notes/E-4.mp3', './audio/notes/A-5.mp3', './audio/notes/empty.mp3'],
+        chordDescription: 'sixth string mute, fifth string open, fourth string second finger second fret, third string third finger second fret, second string fourth finger second fret, first string open'
     },
     {
         chordName: 'A minor',
         fingering: [[0, 0, 0, 0], [1, 0, 0, 0], [0, 3, 0, 0], [0, 2, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]],
         openStrings: [0, 1, 1, 1, 0, -1],
         chordAudio: './audio/chords/Aminor.mp3',
-        stringAudio: ['./audio/notes/E-1.mp3', './audio/notes/C-2.mp3', './audio/notes/A-3.mp3', './audio/notes/E-4.mp3', './audio/notes/A-5.mp3', './audio/notes/empty.mp3']
+        stringAudio: ['./audio/notes/E-1.mp3', './audio/notes/C-2.mp3', './audio/notes/A-3.mp3', './audio/notes/E-4.mp3', './audio/notes/A-5.mp3', './audio/notes/empty.mp3'],
+        chordDescription: 'sixth string mute, fifth string open, fourth string second finger second fret, third string third finger second fret, second string first finger first fret, first string open'
     },
     {
         chordName: 'A major7',
         fingering: [[0, 0, 0, 0], [0, 3, 0, 0], [1, 0, 0, 0], [0, 2, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]],
         openStrings: [0, 1, 1, 1, 0, -1],
         chordAudio: './audio/chords/Amajor7.mp3',
-        stringAudio: ['./audio/notes/E-1.mp3', './audio/notes/Csharp-2.mp3', './audio/notes/Gsharp-3.mp3', './audio/notes/E-4.mp3', './audio/notes/A-5.mp3', './audio/notes/empty.mp3']
+        stringAudio: ['./audio/notes/E-1.mp3', './audio/notes/Csharp-2.mp3', './audio/notes/Gsharp-3.mp3', './audio/notes/E-4.mp3', './audio/notes/A-5.mp3', './audio/notes/empty.mp3'],
+        chordDescription: 'sixth string mute, fifth string open, fourth string second finger second fret, third string first finger first fret, second string third finger second fret, first string open'
     },
     {
         chordName: 'A7',
         fingering: [[0, 0, 0, 0], [0, 3, 0, 0], [0, 0, 0, 0], [0, 2, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]],
         openStrings: [0, 1, 0, 1, 0, -1],
         chordAudio: './audio/chords/A7.mp3',
-        stringAudio: ['./audio/notes/E-1.mp3', './audio/notes/Csharp-2.mp3', './audio/notes/G-3.mp3', './audio/notes/E-4.mp3', './audio/notes/A-5.mp3', './audio/notes/empty.mp3']
+        stringAudio: ['./audio/notes/E-1.mp3', './audio/notes/Csharp-2.mp3', './audio/notes/G-3.mp3', './audio/notes/E-4.mp3', './audio/notes/A-5.mp3', './audio/notes/empty.mp3'],
+        chordDescription: 'sixth string mute, fifth string open, fourth string second finger second fret, third string open, second string third finger second fret, first string open'
     },
     {
         chordName: 'A minor7',
         fingering: [[0, 0, 0, 0], [1, 0, 0, 0], [0, 0, 0, 0], [0, 2, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]],
         openStrings: [0, 1, 0, 1, 0, -1],
         chordAudio: './audio/chords/Aminor7.mp3',
-        stringAudio: ['./audio/notes/E-1.mp3', './audio/notes/C-2.mp3', './audio/notes/G-3.mp3', './audio/notes/E-4.mp3', './audio/notes/A-5.mp3', './audio/notes/empty.mp3']
+        stringAudio: ['./audio/notes/E-1.mp3', './audio/notes/C-2.mp3', './audio/notes/G-3.mp3', './audio/notes/E-4.mp3', './audio/notes/A-5.mp3', './audio/notes/empty.mp3'],
+        chordDescription: 'sixth string mute, fifth string open, fourth string second finger second fret, third string open, second string first finger first fret, first string open'
     },
     {
         chordName: 'G major',
         fingering: [[0, 0, 4, 0], [0, 0, 3, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 1, 0, 0], [0, 0, 2, 0]],
         openStrings: [1, 1, 0, 0, 1, 1],
         chordAudio: './audio/chords/Gmajor.mp3',
-        stringAudio: ['./audio/notes/G-1.mp3', './audio/notes/B-2.mp3', './audio/notes/G-3.mp3', './audio/notes/D-4.mp3', './audio/notes/B-5.mp3', './audio/notes/G-6.mp3']
+        stringAudio: ['./audio/notes/G-1.mp3', './audio/notes/B-2.mp3', './audio/notes/G-3.mp3', './audio/notes/D-4.mp3', './audio/notes/B-5.mp3', './audio/notes/G-6.mp3'],
+        chordDescription: 'sixth string second finger third fret, fifth string first finger second fret, fourth string open, third string open, second string third finger third fret, first string fourth finger third fret'
     },
     {
         chordName: 'G minor',
         fingering: [[0, 0, 4, 0], [0, 0, 3, 0], [0, 0, 2, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 1, 0]],
         openStrings: [1, 1, 1, 0, -1, 1],
         chordAudio: './audio/chords/Gminor.mp3',
-        stringAudio: ['./audio/notes/G-1.mp3', './audio/notes/D-2.mp3', './audio/notes/Asharp-3.mp3', './audio/notes/D-4.mp3', './audio/notes/empty.mp3', './audio/notes/G-6.mp3']
+        stringAudio: ['./audio/notes/G-1.mp3', './audio/notes/D-2.mp3', './audio/notes/Asharp-3.mp3', './audio/notes/D-4.mp3', './audio/notes/empty.mp3', './audio/notes/G-6.mp3'],
+        chordDescription: 'sixth string first finger third fret, fifth string mute, fourth string open, third string second finger third fret, second string third finger third fret, first string fourth finger third fret'
     },
     {
         chordName: 'G major7',
         fingering: [[0, 0, 0, 0], [0, 0, 2, 0], [0, 0, 0, 3], [0, 0, 0, 4], [0, 0, 0, 0], [0, 0, 1, 0]],
         openStrings: [-1, 1, 1, 1, -1, 1],
         chordAudio: './audio/chords/Gmajor7.mp3',
-        stringAudio: ['./audio/notes/empty.mp3', './audio/notes/D-2.mp3', './audio/notes/B-3.mp3', './audio/notes/Fsharp-4.mp3', './audio/notes/empty.mp3', './audio/notes/G-6.mp3']
+        stringAudio: ['./audio/notes/empty.mp3', './audio/notes/D-2.mp3', './audio/notes/B-3.mp3', './audio/notes/Fsharp-4.mp3', './audio/notes/empty.mp3', './audio/notes/G-6.mp3'],
+        chordDescription: 'sixth string first finger third fret, fifth string mute, fourth string foruth finger fourth fret, third string third finger fourth fret, second string second finger third fret, first string mute'
     },
     {
         chordName: 'G7',
         fingering: [[1, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 2, 0, 0], [0, 0, 3, 0]],
         openStrings: [1, 0, 0, 0, 1, 1],
         chordAudio: './audio/chords/G7.mp3',
-        stringAudio: ['./audio/notes/F-1.mp3', './audio/notes/B-2.mp3', './audio/notes/G-3.mp3', './audio/notes/D-4.mp3', './audio/notes/B-5.mp3', './audio/notes/G-6.mp3']
+        stringAudio: ['./audio/notes/F-1.mp3', './audio/notes/B-2.mp3', './audio/notes/G-3.mp3', './audio/notes/D-4.mp3', './audio/notes/B-5.mp3', './audio/notes/G-6.mp3'],
+        chordDescription: 'sixth string third finger third fret, fifth string second finger second fret, fourth string open, third string open, second string fourth finger third fret, first string first finger first fret'
     },
     {
         chordName: 'G minor7',
         fingering: [[0, 0, 0, 0], [0, 0, 4, 0], [0, 0, 3, 0], [0, 0, 2, 0], [0, 0, 0, 0], [0, 0, 1, 0]],
         openStrings: [-1, 1, 1, 1, -1, 1],
         chordAudio: './audio/chords/Gminor7.mp3',
-        stringAudio: ['./audio/notes/empty.mp3', './audio/notes/D-2.mp3', './audio/notes/Asharp-3.mp3', './audio/notes/F-4.mp3', './audio/notes/empty.mp3', './audio/notes/G-6.mp3']
+        stringAudio: ['./audio/notes/empty.mp3', './audio/notes/D-2.mp3', './audio/notes/Asharp-3.mp3', './audio/notes/F-4.mp3', './audio/notes/empty.mp3', './audio/notes/G-6.mp3'],
+        chordDescription: 'sixth string first finger third fret, fifth string mute, fourth string second finger third fret, third string third finger third fret, second string fourth finger third fret, first string mute'
     },
     {
         chordName: 'C major',
         fingering: [[0, 0, 0, 0], [1, 0, 0, 0], [0, 0, 0, 0], [0, 2, 0, 0], [0, 0, 3, 0], [0, 0, 0, 0]],
         openStrings: [0, 1, 0, 1, 1, -1],
         chordAudio: './audio/chords/Cmajor.mp3',
-        stringAudio: ['./audio/notes/E-1.mp3', './audio/notes/C-2.mp3', './audio/notes/G-3.mp3', './audio/notes/E-4.mp3', './audio/notes/C-5.mp3', './audio/notes/empty.mp3']
+        stringAudio: ['./audio/notes/E-1.mp3', './audio/notes/C-2.mp3', './audio/notes/G-3.mp3', './audio/notes/E-4.mp3', './audio/notes/C-5.mp3', './audio/notes/empty.mp3'],
+        chordDescription: 'sixth string mute, fifth string third finger third fret, fourth string second finger second fret, third string open, second string first finger first fret, first string open'
     },
     {
         chordName: 'C minor',
-        fingering: [[0, 0, 0, 0], [1, 0, 0, 0], [0, 0, 0, 0], [1, 0, 0, 0], [0, 0, 4, 0], [0, 0, 0, 0]],
+        fingering: [[0, 0, 0, 0], [2, 0, 0, 0], [0, 0, 0, 0], [1, 0, 0, 0], [0, 0, 4, 0], [0, 0, 0, 0]],
         openStrings: [-1, 1, 0, 1, 1, -1],
         chordAudio: './audio/chords/Cminor.mp3',
-        stringAudio: ['./audio/notes/empty.mp3', './audio/notes/C-2.mp3', './audio/notes/G-3.mp3', './audio/notes/Dsharp-4.mp3', './audio/notes/C-5.mp3', './audio/notes/empty.mp3']
+        stringAudio: ['./audio/notes/empty.mp3', './audio/notes/C-2.mp3', './audio/notes/G-3.mp3', './audio/notes/Dsharp-4.mp3', './audio/notes/C-5.mp3', './audio/notes/empty.mp3'],
+        chordDescription: 'sixth string mute, fifth string fourth finger third fret, fourth string first finger first fret, third string open, second string second finger first fret, first string mute'
     },
     {
         chordName: 'C major7',
         fingering: [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 2, 0, 0], [0, 0, 3, 0], [0, 0, 0, 0]],
         openStrings: [0, 0, 0, 1, 1, -1],
         chordAudio: './audio/chords/Cmajor7.mp3',
-        stringAudio: ['./audio/notes/E-1.mp3', './audio/notes/B-2.mp3', './audio/notes/G-3.mp3', './audio/notes/E-4.mp3', './audio/notes/C-5.mp3', './audio/notes/empty.mp3']
-
+        stringAudio: ['./audio/notes/E-1.mp3', './audio/notes/B-2.mp3', './audio/notes/G-3.mp3', './audio/notes/E-4.mp3', './audio/notes/C-5.mp3', './audio/notes/empty.mp3'],
+        chordDescription: 'sixth string mute, fifth string third finger third fret, fourth string second finger second fret, third string open, second string open, first string open'
     },
     {
-        chordName: 'C 7',
+        chordName: 'C7',
         fingering: [[0, 0, 0, 0], [1, 0, 0, 0], [0, 0, 4, 0], [0, 2, 0, 0], [0, 0, 3, 0], [0, 0, 0, 0]],
         openStrings: [0, 1, 1, 1, 1, -1],
         chordAudio: './audio/chords/C7.mp3',
-        stringAudio: ['./audio/notes/E-1.mp3', './audio/notes/C-2.mp3', './audio/notes/Asharp-3.mp3', './audio/notes/E-4.mp3', './audio/notes/C-5.mp3', './audio/notes/empty.mp3']
+        stringAudio: ['./audio/notes/E-1.mp3', './audio/notes/C-2.mp3', './audio/notes/Asharp-3.mp3', './audio/notes/E-4.mp3', './audio/notes/C-5.mp3', './audio/notes/empty.mp3'],
+        chordDescription: 'sixth string mute, fifth string third finger third fret, fourth string second finger second fret, third string fourth finger third fret, second string first finger first fret, first string open'
     },
     {
         chordName: 'C minor7',
         fingering: [[0, 0, 0, 0], [0, 0, 0, 4], [0, 0, 3, 0], [1, 0, 0, 0], [0, 0, 2, 0], [0, 0, 0, 0]],
         openStrings: [-1, 1, 1, 1, 1, -1],
         chordAudio: './audio/chords/Cminor7.mp3',
-        stringAudio: ['./audio/notes/empty.mp3', './audio/notes/Dsharp-2.mp3', './audio/notes/Asharp-3.mp3', './audio/notes/Dsharp-4.mp3', './audio/notes/C-5.mp3', './audio/notes/empty.mp3']
+        stringAudio: ['./audio/notes/empty.mp3', './audio/notes/Dsharp-2.mp3', './audio/notes/Asharp-3.mp3', './audio/notes/Dsharp-4.mp3', './audio/notes/C-5.mp3', './audio/notes/empty.mp3'],
+        chordDescription: 'sixth string mute, fifth string second finger third fret, fourth string first finger first fret, third string third finger third fret, second string fourth finger fourth fret, first string mute'
     },
     {
         chordName: 'D major',
         fingering: [[0, 2, 0, 0], [0, 0, 3, 0], [0, 1, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]],
         openStrings: [1, 1, 1, 0, -1, -1],
         chordAudio: './audio/chords/Dmajor.mp3',
-        stringAudio: ['./audio/notes/Fsharp-1.mp3', './audio/notes/D-2.mp3', './audio/notes/A-3.mp3', './audio/notes/D-4.mp3', './audio/notes/empty.mp3', './audio/notes/empty.mp3']
+        stringAudio: ['./audio/notes/Fsharp-1.mp3', './audio/notes/D-2.mp3', './audio/notes/A-3.mp3', './audio/notes/D-4.mp3', './audio/notes/empty.mp3', './audio/notes/empty.mp3'],
+        chordDescription: 'sixth string mute, fifth string mute, fourth string open, third string first finger second fret, second string third finger third fret, first string second finger second fret'
     },
     {
         chordName: 'D minor',
         fingering: [[1, 0, 0, 0], [0, 0, 3, 0], [0, 2, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]],
         openStrings: [1, 1, 1, 0, -1, -1],
         chordAudio: './audio/chords/Dminor.mp3',
-        stringAudio: ['./audio/notes/F-1.mp3', './audio/notes/D-2.mp3', './audio/notes/A-3.mp3', './audio/notes/D-4.mp3', './audio/notes/empty.mp3', './audio/notes/empty.mp3']
+        stringAudio: ['./audio/notes/F-1.mp3', './audio/notes/D-2.mp3', './audio/notes/A-3.mp3', './audio/notes/D-4.mp3', './audio/notes/empty.mp3', './audio/notes/empty.mp3'],
+        chordDescription: 'sixth string mute, fifth string mute, fourth string open, third string second finger second fret, second string third finger third fret, first string first finger first fret'
     },
     {
         chordName: 'D major7',
         fingering: [[0, 4, 0, 0], [0, 3, 0, 0], [0, 2, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]],
         openStrings: [1, 1, 1, 0, -1, -1],
         chordAudio: './audio/chords/Dmajor7.mp3',
-        stringAudio: ['./audio/notes/Fsharp-1.mp3', './audio/notes/Csharp-2.mp3', './audio/notes/A-3.mp3', './audio/notes/D-4.mp3', './audio/notes/empty.mp3', './audio/notes/empty.mp3']
+        stringAudio: ['./audio/notes/Fsharp-1.mp3', './audio/notes/Csharp-2.mp3', './audio/notes/A-3.mp3', './audio/notes/D-4.mp3', './audio/notes/empty.mp3', './audio/notes/empty.mp3'],
+        chordDescription: 'sixth string mute, fifth string mute, fourth string open, third string second finger second fret, second string third finger second fret, first string fourth finger second fret'
     },
     {
         chordName: 'D7',
         fingering: [[0, 3, 0, 0], [1, 0, 0, 0], [0, 2, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]],
         openStrings: [1, 1, 1, 0, -1, -1],
         chordAudio: './audio/chords/D7.mp3',
-        stringAudio: ['./audio/notes/Fsharp-1.mp3', './audio/notes/C-2.mp3', './audio/notes/A-3.mp3', './audio/notes/D-4.mp3', './audio/notes/empty.mp3', './audio/notes/empty.mp3']
+        stringAudio: ['./audio/notes/Fsharp-1.mp3', './audio/notes/C-2.mp3', './audio/notes/A-3.mp3', './audio/notes/D-4.mp3', './audio/notes/empty.mp3', './audio/notes/empty.mp3'],
+        chordDescription: 'sixth string mute, fifth string mute, fourth string open, third string second finger second fret, second string first finger first fret, first string third finger second fret'
     },
     {
         chordName: 'D minor7',
         fingering: [[1, 0, 0, 0], [1, 0, 0, 0], [0, 2, 0, 0], [0, 2, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]],
         openStrings: [1, 1, 1, 0, -1, -1],
         chordAudio: './audio/chords/Dminor7.mp3',
-        stringAudio: ['./audio/notes/F-1.mp3', './audio/notes/C-2.mp3', './audio/notes/A-3.mp3', './audio/notes/D-4.mp3', './audio/notes/empty.mp3', './audio/notes/empty.mp3']
+        stringAudio: ['./audio/notes/F-1.mp3', './audio/notes/C-2.mp3', './audio/notes/A-3.mp3', './audio/notes/D-4.mp3', './audio/notes/empty.mp3', './audio/notes/empty.mp3'],
+        chordDescription: 'sixth string mute, fifth string mute, fourth string open, third string second finger second fret, second string first finger first fret, first string second finger first fret'
     },
     {
         chordName: 'F major',
         fingering: [[1, 0, 0, 0], [1, 0, 0, 0], [0, 2, 0, 0], [0, 0, 4, 0], [0, 0, 3, 0], [1, 0, 0, 0]],
         openStrings: [1, 1, 1, 1, 1, 1],
         chordAudio: './audio/chords/Fmajor.mp3',
-        stringAudio: ['./audio/notes/F-1.mp3', './audio/notes/C-2.mp3', './audio/notes/A-3.mp3', './audio/notes/F-4.mp3', './audio/notes/C-5.mp3', './audio/notes/F-6.mp3']
+        stringAudio: ['./audio/notes/F-1.mp3', './audio/notes/C-2.mp3', './audio/notes/A-3.mp3', './audio/notes/F-4.mp3', './audio/notes/C-5.mp3', './audio/notes/F-6.mp3'],
+        chordDescription: 'sixth string first finger first fret, fifth string third finger third fret, fourth string fourth finger fourth fret, third string second finger second fret, second string first finger first fret, first string first finger first fret'
     },
     {
         chordName: 'F minor',
         fingering: [[1, 0, 0, 0], [1, 0, 0, 0], [1, 0, 0, 0], [0, 0, 4, 0], [0, 0, 3, 0], [1, 0, 0, 0]],
         openStrings: [1, 1, 1, 1, 1, 1],
         chordAudio: './audio/chords/Fminor.mp3',
-        stringAudio: ['./audio/notes/F-1.mp3', './audio/notes/C-2.mp3', './audio/notes/Gsharp-3.mp3', './audio/notes/F-4.mp3', './audio/notes/C-5.mp3', './audio/notes/F-6.mp3']
+        stringAudio: ['./audio/notes/F-1.mp3', './audio/notes/C-2.mp3', './audio/notes/Gsharp-3.mp3', './audio/notes/F-4.mp3', './audio/notes/C-5.mp3', './audio/notes/F-6.mp3'],
+        chordDescription: 'sixth string first finger first fret, fifth string third finger third fret, fourth string fourth finger fourth fret, third string first finger second fret, second string first finger first fret, first string first finger first fret'
     },
     {
         chordName: 'F major7',
         fingering: [[1, 0, 0, 0], [1, 0, 0, 0], [0, 3, 0, 0], [0, 2, 0, 0], [0, 0, 4, 0], [1, 0, 0, 0]],
         openStrings: [1, 1, 1, 1, 1, 1],
         chordAudio: './audio/chords/Fmajor7.mp3',
-        stringAudio: ['./audio/notes/F-1.mp3', './audio/notes/C-2.mp3', './audio/notes/A-3.mp3', './audio/notes/E-4.mp3', './audio/notes/C-5.mp3', './audio/notes/F-6.mp3']
+        stringAudio: ['./audio/notes/F-1.mp3', './audio/notes/C-2.mp3', './audio/notes/A-3.mp3', './audio/notes/E-4.mp3', './audio/notes/C-5.mp3', './audio/notes/F-6.mp3'],
+        chordDescription: 'sixth string first finger first fret, fifth string fourth finger third fret, fourth string second finger third fret, third string third finger finger second fret, second string first finger first fret, first string first finger first fret'
     },
     {
         chordName: 'F7',
         fingering: [[1, 0, 0, 0], [1, 0, 0, 0], [0, 2, 0, 0], [1, 0, 0, 0], [0, 0, 3, 0], [1, 0, 0, 0]],
         openStrings: [1, 1, 1, 1, 1, 1],
         chordAudio: './audio/chords/F7.mp3',
-        stringAudio: ['./audio/notes/F-1.mp3', './audio/notes/C-2.mp3', './audio/notes/A-3.mp3', './audio/notes/Dsharp-4.mp3', './audio/notes/C-5.mp3', './audio/notes/F-6.mp3']
+        stringAudio: ['./audio/notes/F-1.mp3', './audio/notes/C-2.mp3', './audio/notes/A-3.mp3', './audio/notes/Dsharp-4.mp3', './audio/notes/C-5.mp3', './audio/notes/F-6.mp3'],
+        chordDescription: 'sixth string first finger first fret, fifth string third finger third fret, fourth string first finger first fret, third string second finger second fret, second string first finger first fret, first string first finger first fret'
     },
     {
         chordName: 'F minor7',
-        fingering: [[1, 0, 0, 0], [1, 0, 0, 0], [1, 0, 0, 0], [0, 0, 4, 0], [0, 0, 3, 0], [1, 0, 0, 0]],
+        fingering: [[1, 0, 0, 0], [1, 0, 0, 0], [1, 0, 0, 0], [1, 0, 0, 0], [0, 0, 3, 0], [1, 0, 0, 0]],
         openStrings: [1, 1, 1, 1, 1, 1],
         chordAudio: './audio/chords/Fminor7.mp3',
-        stringAudio: ['./audio/notes/F-1.mp3', './audio/notes/C-2.mp3', './audio/notes/Gsharp-3.mp3', './audio/notes/Dsharp-4.mp3', './audio/notes/C-5.mp3', './audio/notes/F-6.mp3']
+        stringAudio: ['./audio/notes/F-1.mp3', './audio/notes/C-2.mp3', './audio/notes/Gsharp-3.mp3', './audio/notes/Dsharp-4.mp3', './audio/notes/C-5.mp3', './audio/notes/F-6.mp3'],
+        chordDescription: 'sixth string first finger first fret, fifth string third finger third fret, fourth string first finger first fret, third string first finger first fret, second string first finger first fret, first string first finger first fret'
     },
     {
         chordName: 'B major',
         fingering: [[0, 1, 0, 0], [0, 0, 0, 4], [0, 0, 0, 3], [0, 0, 0, 2], [0, 1, 0, 0], [0, 0, 0, 0]],
         openStrings: [1, 1, 1, 1, 1, -1],
         chordAudio: './audio/chords/Bmajor.mp3',
-        stringAudio: ['./audio/notes/Fsharp-1.mp3', './audio/notes/Dsharp-2.mp3', './audio/notes/B-3.mp3', './audio/notes/Fsharp-4.mp3', './audio/notes/B-5.mp3', './audio/notes/empty.mp3']
+        stringAudio: ['./audio/notes/Fsharp-1.mp3', './audio/notes/Dsharp-2.mp3', './audio/notes/B-3.mp3', './audio/notes/Fsharp-4.mp3', './audio/notes/B-5.mp3', './audio/notes/empty.mp3'],
+        chordDescription: 'sixth string mute, fifth string first finger second fret, fourth string second finger fourth fret, third string third finger fourth fret, second string fourth finger fourth fret, first string first finger second fret'
     },
     {
         chordName: 'B minor',
         fingering: [[0, 1, 0, 0], [0, 0, 2, 0], [0, 0, 0, 4], [0, 0, 0, 3], [0, 1, 0, 0], [0, 0, 0, 0]],
         openStrings: [1, 1, 1, 1, 1, -1],
         chordAudio: './audio/chords/Bminor.mp3',
-        stringAudio: ['./audio/notes/Fsharp-1.mp3', './audio/notes/D-2.mp3', './audio/notes/B-3.mp3', './audio/notes/Fsharp-4.mp3', './audio/notes/B-5.mp3', './audio/notes/empty.mp3']
+        stringAudio: ['./audio/notes/Fsharp-1.mp3', './audio/notes/D-2.mp3', './audio/notes/B-3.mp3', './audio/notes/Fsharp-4.mp3', './audio/notes/B-5.mp3', './audio/notes/empty.mp3'],
+        chordDescription: 'sixth string mute, fifth string first finger second fret, fourth string third finger fourth fret, third string fourth finger fourth fret, second string second finger third fret, first string first finger second fret'
     },
     {
         chordName: 'B major7',
         fingering: [[0, 1, 0, 0], [0, 0, 0, 4], [0, 0, 2, 0], [0, 0, 0, 3], [0, 1, 0, 0], [0, 0, 0, 0]],
         openStrings: [1, 1, 1, 1, 1, -1],
         chordAudio: './audio/chords/Bmajor7.mp3',
-        stringAudio: ['./audio/notes/Fsharp-1.mp3', './audio/notes/Dsharp-2.mp3', './audio/notes/Asharp-3.mp3', './audio/notes/Fsharp-4.mp3', './audio/notes/B-5.mp3', './audio/notes/empty.mp3']
+        stringAudio: ['./audio/notes/Fsharp-1.mp3', './audio/notes/Dsharp-2.mp3', './audio/notes/Asharp-3.mp3', './audio/notes/Fsharp-4.mp3', './audio/notes/B-5.mp3', './audio/notes/empty.mp3'],
+        chordDescription: 'sixth string mute, fifth string first finger second fret, fourth string third finger fourth fret, third string second finger third fret, second string fourth finger fourth fret, first string first finger second fret'
 
     },
     {
@@ -253,49 +287,56 @@ guitarApp.chordData = [
         fingering: [[0, 1, 0, 0], [0, 0, 0, 4], [0, 1, 0, 0], [0, 0, 0, 3], [0, 1, 0, 0], [0, 0, 0, 0]],
         openStrings: [1, 1, 1, 1, 1, -1],
         chordAudio: './audio/chords/B7.mp3',
-        stringAudio: ['./audio/notes/Fsharp-1.mp3', './audio/notes/Dsharp-2.mp3', './audio/notes/A-3.mp3', './audio/notes/Fsharp-4.mp3', './audio/notes/B-5.mp3', './audio/notes/empty.mp3']
+        stringAudio: ['./audio/notes/Fsharp-1.mp3', './audio/notes/Dsharp-2.mp3', './audio/notes/A-3.mp3', './audio/notes/Fsharp-4.mp3', './audio/notes/B-5.mp3', './audio/notes/empty.mp3'],
+        chordDescription: 'sixth string mute, fifth string first finger second fret, fourth string third finger fourth fret, third string first finger second fret, second string fourth finger fourth fret, first string first finger second fret'
     },
     {
         chordName: 'B minor7',
         fingering: [[0, 1, 0, 0], [0, 0, 2, 0], [0, 0, 0, 4], [0, 0, 0, 3], [0, 1, 0, 0], [0, 0, 0, 0]],
         openStrings: [1, 1, 1, 1, 1, -1],
         chordAudio: './audio/chords/Bminor7.mp3',
-        stringAudio: ['./audio/notes/Fsharp-1.mp3', './audio/notes/D-2.mp3', './audio/notes/A-3.mp3', './audio/notes/Fsharp-4.mp3', './audio/notes/B-5.mp3', './audio/notes/empty.mp3']
+        stringAudio: ['./audio/notes/Fsharp-1.mp3', './audio/notes/D-2.mp3', './audio/notes/A-3.mp3', './audio/notes/Fsharp-4.mp3', './audio/notes/B-5.mp3', './audio/notes/empty.mp3'],
+        chordDescription: 'sixth string mute, fifth string first finger second fret, fourth string third finger fourth fret, third string first finger second fret, second string second finger third fret, first string first finger second fret'
     },
     {
         chordName: 'F# major',
         fingering: [[0, 1, 0, 0], [0, 1, 0, 0], [0, 0, 2, 0], [0, 0, 0, 4], [0, 0, 0, 3], [0, 1, 0, 0]],
         openStrings: [1, 1, 1, 1, 1, 1],
         chordAudio: './audio/chords/F#major.mp3',
-        stringAudio: ['./audio/notes/Fsharp-1.mp3', './audio/notes/Csharp-2.mp3', './audio/notes/Asharp-3.mp3', './audio/notes/Fsharp-4.mp3', './audio/notes/Csharp-5.mp3', './audio/notes/Fsharp-6.mp3']
+        stringAudio: ['./audio/notes/Fsharp-1.mp3', './audio/notes/Csharp-2.mp3', './audio/notes/Asharp-3.mp3', './audio/notes/Fsharp-4.mp3', './audio/notes/Csharp-5.mp3', './audio/notes/Fsharp-6.mp3'],
+        chordDescription: 'sixth string first finger second fret, fifth string third finger fourth fret, fourth string fourth finger fourth fret, third string second finger third fret, second string first finger second fret, first string second finger second fret'
     },
     {
         chordName: 'F# minor',
         fingering: [[0, 1, 0, 0], [0, 1, 0, 0], [0, 1, 0, 0], [0, 0, 0, 4], [0, 0, 0, 3], [0, 1, 0, 0]],
         openStrings: [1, 1, 1, 1, 1, 1],
         chordAudio: './audio/chords/F#minor.mp3',
-        stringAudio: ['./audio/notes/Fsharp-1.mp3', './audio/notes/Csharp-2.mp3', './audio/notes/A-3.mp3', './audio/notes/Fsharp-4.mp3', './audio/notes/Csharp-5.mp3', './audio/notes/Fsharp-6.mp3']
+        stringAudio: ['./audio/notes/Fsharp-1.mp3', './audio/notes/Csharp-2.mp3', './audio/notes/A-3.mp3', './audio/notes/Fsharp-4.mp3', './audio/notes/Csharp-5.mp3', './audio/notes/Fsharp-6.mp3'],
+        chordDescription: 'sixth string first finger second fret, fifth string third finger fourth fret, fourth string fourth finger fourth fret, third string first finger second fret, second string first finger second fret, first string second finger second fret'
     },
     {
         chordName: 'F# major7',
         fingering: [[0, 1, 0, 0], [0, 1, 0, 0], [0, 0, 3, 0], [0, 0, 2, 0], [0, 0, 0, 4], [0, 1, 0, 0]],
         openStrings: [1, 1, 1, 1, 1, 1],
         chordAudio: './audio/chords/Fsharpmajor7.mp3',
-        stringAudio: ['./audio/notes/Fsharp-1.mp3', './audio/notes/Csharp-2.mp3', './audio/notes/Asharp-3.mp3', './audio/notes/F-4.mp3', './audio/notes/Csharp-5.mp3', './audio/notes/Fsharp-6.mp3']
+        stringAudio: ['./audio/notes/Fsharp-1.mp3', './audio/notes/Csharp-2.mp3', './audio/notes/Asharp-3.mp3', './audio/notes/F-4.mp3', './audio/notes/Csharp-5.mp3', './audio/notes/Fsharp-6.mp3'],
+        chordDescription: 'sixth string first finger second fret, fifth string fourth finger fourth fret, fourth string second finger third fret, third string third finger third fret, second string first finger second fret, first string second finger second fret'
     },
     {
         chordName: 'F#7',
         fingering: [[0, 1, 0, 0], [0, 1, 0, 0], [0, 0, 2, 0], [0, 1, 0, 0], [0, 0, 0, 3], [0, 1, 0, 0]],
         openStrings: [1, 1, 1, 1, 1, 1],
         chordAudio: './audio/chords/F#7.mp3',
-        stringAudio: ['./audio/notes/Fsharp-1.mp3', './audio/notes/Csharp-2.mp3', './audio/notes/Asharp-3.mp3', './audio/notes/E-4.mp3', './audio/notes/Csharp-5.mp3', './audio/notes/Fsharp-6.mp3']
+        stringAudio: ['./audio/notes/Fsharp-1.mp3', './audio/notes/Csharp-2.mp3', './audio/notes/Asharp-3.mp3', './audio/notes/E-4.mp3', './audio/notes/Csharp-5.mp3', './audio/notes/Fsharp-6.mp3'],
+        chordDescription: 'sixth string first finger second fret, fifth string third finger fourth fret, fourth string first finger second fret, third string second finger third fret, second string first finger second fret, first string second finger second fret'
     },
     {
         chordName: 'F# minor7',
         fingering: [[0, 1, 0, 0], [0, 1, 0, 0], [0, 1, 0, 0], [0, 1, 0, 0], [0, 0, 0, 3], [0, 1, 0, 0]],
         openStrings: [1, 1, 1, 1, 1, 1],
         chordAudio: './audio/chords/F#minor7.mp3',
-        stringAudio: ['./audio/notes/Fsharp-1.mp3', './audio/notes/Csharp-2.mp3', './audio/notes/A-3.mp3', './audio/notes/E-4.mp3', './audio/notes/Csharp-5.mp3', './audio/notes/Fsharp-6.mp3']
+        stringAudio: ['./audio/notes/Fsharp-1.mp3', './audio/notes/Csharp-2.mp3', './audio/notes/A-3.mp3', './audio/notes/E-4.mp3', './audio/notes/Csharp-5.mp3', './audio/notes/Fsharp-6.mp3'],
+        chordDescription: 'sixth string first finger second fret, fifth string third finger fourth fret, fourth string first finger second fret, third string first finger second fret, second string first finger second fret, first string second finger second fret'
     },
 ]
 
@@ -350,7 +391,6 @@ guitarApp.fingersOnDOM = (chord) => {
             $(`.string-${index + 1}-0`).css({ 'visibility': 'visible', 'color': 'red' }).text('X')
         }
     });
-
 };
 
 // These two variables are initalized as an empty string and are then redefined insie the ChordAudio and StringAudio functions as new Audio() objects.
@@ -383,47 +423,34 @@ guitarApp.stringAudio = (string) => {
     noteAudio.setAttribute('src', string);
 };
 
-// guitarApp.stringColor = (string, chordIndex) => {
-//     const stringNum = ((string.slice(-1)) - 1);
-
-//     const originalStringColor = $(string).css('background')
-
-//     if (guitarApp.chordData[chordIndex].openStrings[stringNum] !== -1) {
-
-//         $(string).css('background', '#449DD1')
-
-//         setTimeout(() => {
-//             $(string).css('background', originalStringColor)
-//         }, 200)
-
-// } else if (guitarApp.chordData[chordIndex].openStrings[stringNum] === -1) {
-
-//     $(string).css('background', 'red')
-
-//     setTimeout(() => {
-//         $(string).css('background', originalStringColor)
-//     }, 200)
-
-// }
-
-//     };
-// };
-
 guitarApp.stringColor = (string, chordIndex) => {
+    // Since the string variable represents a class ie. .string-6, the number (last character) is sliced and decremented. StringNum is then utilized below as the index number when looking for specific values in the openString array.
     const stringNum = ((string.slice(-1)) - 1);
 
-    if (guitarApp.chordData[chordIndex].openStrings[stringNum] !== -1) {
+    // Making sure the background for each string is initally black.
+    $(string).css('background', 'black');
 
-        const originalStringColor = $(string).css('background')
+    // storing that color in a variable.
+    const originalStringColor = $(string).css('background');
 
-        $(string).css('background', '#449DD1')
+    // Checking the openString array in chordData to see what color each string should be.
+    if (guitarApp.chordData[chordIndex].openStrings[stringNum] === -1) {
+        // The new string color based on the if statement.
+        $(string).css('background', 'red');
+
+        // setting the string back to its original color after 200 milliseconds.
+        setTimeout(() => {
+            $(string).css('background', originalStringColor)
+        }, 200);
+
+    } else {
+        $(string).css('background', '#449DD1');
 
         setTimeout(() => {
             $(string).css('background', originalStringColor)
-        }, 300)
+        }, 200);
     };
 };
-
 
 guitarApp.init = () => {
     // Calling the populateForm function to populate the dropdown menu with all the possible chord choices.
@@ -442,10 +469,8 @@ guitarApp.init = () => {
             return chord.chordName.charAt(0).toLowerCase() === String.fromCharCode(e.keyCode)
         });
 
-        console.log($('.string-1').css('height'))
-
         // Using the index number that was matched above, we get the value of the specific chord in the chordData array
-        let chordSelected = guitarApp.chordData[selected].chordName;
+        const chordSelected = guitarApp.chordData[selected].chordName;
 
         // Updating the dropdown form with the current selection
         $('#chord').val(chordSelected);
@@ -467,8 +492,8 @@ guitarApp.init = () => {
         // Creating an event listener on each string, using the guitarStrings array of class names, then calling the audio file for each string
         guitarStrings.forEach((string, index) => {
             $(string).on('mouseenter', function (e) {
-                guitarApp.stringColor(string, chordIndex)
-                guitarApp.stringAudio(guitarApp.chordData[chordIndex].stringAudio[index])
+                guitarApp.stringColor(string, chordIndex);
+                guitarApp.stringAudio(guitarApp.chordData[chordIndex].stringAudio[index]);
             });
         });
     });
@@ -493,9 +518,7 @@ guitarApp.init = () => {
         guitarApp.fingersOnDOM(guitarApp.chordData[chordIndex]);
 
         guitarStrings.forEach((string, index) => {
-
             $(string).on('mouseenter', function (e) {
-
                 guitarApp.stringColor(string, chordIndex)
                 guitarApp.stringAudio(guitarApp.chordData[chordIndex].stringAudio[index])
 
@@ -504,8 +527,7 @@ guitarApp.init = () => {
     });
 };
 
-
-// Calling the init function when the docuemnt is ready!!!
+// Calling the init function when the docuemnt is ready, omg!!!
 $(function () {
     guitarApp.init()
 });

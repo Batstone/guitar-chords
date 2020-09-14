@@ -221,6 +221,20 @@ textarea {
   overflow: hidden;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 body {
   font-family: 'Cardo', serif;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #e9e7e7), to(#449DD1));
@@ -370,7 +384,7 @@ header h1::after {
 
 .string-1 {
   height: 4px;
-  background: radial-gradient(at top, #c4c4c4, #111111);
+  background: black;
 }
 
 .string-1 .string-1-1 {
@@ -415,7 +429,7 @@ header h1::after {
 
 .string-2 {
   height: 5px;
-  background: radial-gradient(at top, #c4c4c4, #111111);
+  background: black;
 }
 
 .string-2 .string-2-1 {
@@ -460,7 +474,7 @@ header h1::after {
 
 .string-3 {
   height: 7px;
-  background: radial-gradient(at top, #c4c4c4, #111111);
+  background: black;
 }
 
 .string-3 .string-3-1 {
@@ -505,7 +519,7 @@ header h1::after {
 
 .string-4 {
   height: 7px;
-  background: radial-gradient(at top, #c4c4c4, #111111);
+  background: black;
 }
 
 .string-4 .string-4-1 {
@@ -550,7 +564,7 @@ header h1::after {
 
 .string-5 {
   height: 8px;
-  background: radial-gradient(at top, #c4c4c4, #111111);
+  background: black;
 }
 
 .string-5 .string-5-1 {
@@ -595,7 +609,7 @@ header h1::after {
 
 .string-6 {
   height: 12px;
-  background: radial-gradient(at top, #c4c4c4, #111111);
+  background: black;
 }
 
 .string-6 .string-6-1 {
