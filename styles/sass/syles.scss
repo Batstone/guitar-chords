@@ -257,8 +257,8 @@ header {
 .audio-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    width: 50%;
     margin-left: 20px;
 }
 
@@ -275,9 +275,7 @@ form {
         font-size: 35px;
         font-weight: bold;
         text-align: center;
-    }
-    select {
-        margin-top: 15px;
+        margin-bottom: 20px
     }
 }
 
@@ -288,8 +286,8 @@ form {
     align-items: center;
     width: 50%;
     margin-left: 10px;
-    margin-right: 20px;
 }
+  
 
 ul {
     font-size: 25px;
@@ -298,7 +296,7 @@ ul {
         margin: 20px 0 20px 50px;
     }
     li {
-        margin-left: 50px
+        margin-left: 50px;
     }
     li::before {
         content: '\01F3BC';
@@ -315,7 +313,17 @@ ul {
     border-radius: 20%;
     border: 5px solid black;
     transition: .2s;
+    &:hover {
+        border: 5px solid rgb(255, 135, 23);
+    }
+    &:focus {
+        border: 5px solid rgb(255, 135, 23);
+    }
+    &:active {
+        background: radial-gradient(at center, rgb(255, 255, 255), rgb(58, 58, 58));
+    }
 }
+
 
 footer {
     color: rgb(252, 170, 17);

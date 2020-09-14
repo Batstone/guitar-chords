@@ -235,6 +235,9 @@ textarea {
   overflow: hidden;
 }
 
+/* Portrait tablet and small desktops */
+/* Landscape phone to portrait tablet */
+/* Landscape phones and down */
 body {
   font-family: 'Cardo', serif;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #e9e7e7), to(#449DD1));
@@ -660,12 +663,10 @@ header h1::after {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 50%;
   margin-left: 20px;
 }
 
@@ -692,10 +693,7 @@ form label {
   font-size: 35px;
   font-weight: bold;
   text-align: center;
-}
-
-form select {
-  margin-top: 15px;
+  margin-bottom: 20px;
 }
 
 .tips-container {
@@ -714,7 +712,6 @@ form select {
           align-items: center;
   width: 50%;
   margin-left: 10px;
-  margin-right: 20px;
 }
 
 ul {
@@ -745,6 +742,18 @@ ul li::before {
   border: 5px solid black;
   -webkit-transition: .2s;
   transition: .2s;
+}
+
+.audio-button:hover {
+  border: 5px solid #ff8717;
+}
+
+.audio-button:focus {
+  border: 5px solid #ff8717;
+}
+
+.audio-button:active {
+  background: radial-gradient(at center, white, #3a3a3a);
 }
 
 footer {

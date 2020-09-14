@@ -350,14 +350,14 @@ guitarApp.populateForm = () => {
     });
 };
 
-// Function for clearing the fingering on the fretboard
+// Function for clearing the fingering on the fretboard.
 guitarApp.clearFingerInput = (string, stringNumber) => {
-    $.each(string, function (index, note) {
+    $.each(string, function (index) {
         $(`.string-${stringNumber}-${index + 1}`).css('visibility', 'hidden');
     });
 };
 
-// Function for inputing fingering on the fretboard
+// Function for inputing fingering on the fretboard.
 guitarApp.fingerInput = (string, stringNumber) => {
     $.each(string, function (index, note) {
         if (note !== 0) {
@@ -366,24 +366,24 @@ guitarApp.fingerInput = (string, stringNumber) => {
     });
 };
 
-// Function that calls the clear DOM and update DOM functions with each string
+// Function that calls the clear DOM and update DOM functions with each string.
 guitarApp.fingersOnDOM = (chord) => {
-    // Clear the fretboard/DOM fingering before updating it with the new fingering
+    // Clear the fretboard/DOM fingering before updating it with the new fingering.
     chord.fingering.forEach((string, index) => {
         guitarApp.clearFingerInput(string, index + 1)
     });
 
-    // Clearing the open string indications
+    // Clearing the open string indications.
     chord.openStrings.forEach((note, index) => {
         $(`.string-${index + 1}-0`).css({ 'visibility': 'hidden', 'color': 'black' });
     });
 
-    // Calling the fingerInput function for each string
+    // Calling the fingerInput function for each string.
     chord.fingering.forEach((string, index) => {
         guitarApp.fingerInput(string, index + 1)
     });
 
-    // Populating the DOM with the correct open string indications
+    // Populating the DOM with the correct open string indications.
     chord.openStrings.forEach((note, index) => {
         if (note === 0) {
             $(`.string-${index + 1}-0`).css('visibility', 'visible').text('O')
@@ -398,7 +398,7 @@ guitarApp.strumAudio = ''
 guitarApp.noteAudio = ''
 
 guitarApp.chordAudio = (chord) => {
-    if (typeof (guitarApp.strumAudio != 'object')) {
+    if (typeof (guitarApp.strumAudio !== 'object')) {
         strumAudio = document.createElement('audio');
 
         strumAudio.addEventListener('loadeddata', () => {
@@ -406,12 +406,12 @@ guitarApp.chordAudio = (chord) => {
         });
     };
 
-    // Changing the src each time a new chord is selected, so that the correct audio file wil play.
+    // Changing the src each time a new chord is selected, so that the correct audio file will play.
     strumAudio.setAttribute('src', chord.chordAudio)
 };
 
 guitarApp.stringAudio = (string) => {
-    if (typeof (guitarApp.stringAudio != 'object')) {
+    if (typeof (guitarApp.stringAudio !== 'object')) {
         noteAudio = document.createElement('audio');
 
         noteAudio.addEventListener('loadeddata', () => {
@@ -452,6 +452,16 @@ guitarApp.stringColor = (string, chordIndex) => {
     };
 };
 
+guitarApp.accessibilityText = (chord) => {
+    // Storing the relevant information from the chord object.
+    const chordName = chord.chordName
+    const chordText = chord.chordDescription
+
+    // Selecting the screen-reader only p tag and updating it with the relevant information so that the chord instructions can be read aloud.
+    $('.chord-description').text(`${chordName}: ${chordText}`)
+}
+
+
 guitarApp.init = () => {
     // Calling the populateForm function to populate the dropdown menu with all the possible chord choices.
     guitarApp.populateForm();
@@ -469,31 +479,37 @@ guitarApp.init = () => {
             return chord.chordName.charAt(0).toLowerCase() === String.fromCharCode(e.keyCode)
         });
 
-        // Using the index number that was matched above, we get the value of the specific chord in the chordData array
+        // Using the index number that was matched above, we get the value of the specific chord in the chordData array.
         const chordSelected = guitarApp.chordData[selected].chordName;
 
-        // Updating the dropdown form with the current selection
+        // Updating the dropdown form with the current selection.
         $('#chord').val(chordSelected);
 
-        // Find the index of the selected chord in the chordData array
+        // Find the index of the selected chord in the chordData array.
         const chordIndex = guitarApp.chordData.findIndex((chord) => {
             return chordSelected === chord.chordName
         });
 
-        // Updated the DOM to display the chord selected in the text container
+        // The current chord object stored in a variable .
+        const currentChord = guitarApp.chordData[chordIndex]
+
+        // Calling the accessibility text function.
+        guitarApp.accessibilityText(currentChord)
+
+        // Updated the DOM to display the chord selected in the text container.
         $('.audio-button').html(`${chordSelected}`).on('click', function (e) {
-            // Updating the play button with the correct chord audio
-            guitarApp.chordAudio(guitarApp.chordData[chordIndex])
+            // Updating the play button with the correct chord audio.
+            guitarApp.chordAudio(currentChord)
         });
 
-        // Calling fingersonDOM function on the specific item in the chordData array to display the fingering on the fretboard
-        guitarApp.fingersOnDOM(guitarApp.chordData[chordIndex])
+        // Calling fingersonDOM function on the specific item in the chordData array to display the fingering on the fretboard.
+        guitarApp.fingersOnDOM(currentChord)
 
-        // Creating an event listener on each string, using the guitarStrings array of class names, then calling the audio file for each string
+        // Creating an event listener on each string, using the guitarStrings array of class names, then calling the audio file for each string.
         guitarStrings.forEach((string, index) => {
             $(string).on('mouseenter', function (e) {
                 guitarApp.stringColor(string, chordIndex);
-                guitarApp.stringAudio(guitarApp.chordData[chordIndex].stringAudio[index]);
+                guitarApp.stringAudio(currentChord.stringAudio[index]);
             });
         });
     });
@@ -503,18 +519,24 @@ guitarApp.init = () => {
         // Get the value of the selected chord, ie. 'C', 'G', 'Am' etc...
         const chordSelected = $(this).val();
 
-        // Find the index of the selected chord in the chordData array
+        // Find the index of the selected chord in the chordData array.
         const chordIndex = guitarApp.chordData.findIndex((chord) => {
             return chordSelected === chord.chordName
         });
 
-        // Updated the DOM to display the chord selected in the text container
+        // The current chord object stored in a variable. 
+        const currentChord = guitarApp.chordData[chordIndex]
+
+        // Calling the accessibility text function.
+        guitarApp.accessibilityText(currentChord)
+
+        // Updated the DOM to display the chord selected in the text container.
         $('.audio-button').html(`${chordSelected}`).on('click', function (e) {
-            // Updating the play button with the correct chord audi
+            // Updating the play button with the correct chord audio.
             guitarApp.chordAudio(guitarApp.chordData[chordIndex])
         });
 
-        // Calling fingersonDOM function on the specific item in the chordData array to display the fingering on the fretboard
+        // Calling fingersonDOM function on the specific item in the chordData array to display the fingering on the fretboard.
         guitarApp.fingersOnDOM(guitarApp.chordData[chordIndex]);
 
         guitarStrings.forEach((string, index) => {

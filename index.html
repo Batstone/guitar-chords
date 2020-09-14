@@ -15,17 +15,14 @@
 </head>
 
 <body>
-
     <header>
         <h1>Guitar Chords</h1>
     </header>
 
-
     <main>
 
+        <!-- The guitar fretboard with fingering/strings, made in CSS using empty divs. This is hidden from screen readers. Chord text that is sr-only can be found below -->
         <section class="guitar-neck" aria-hidden="true">
-
-            <!-- The guitar fretboard with fingering/strings, made in CSS using empty divs. -->
             <div class="fretboard wrapper">
                 <div class="open-strings-container">
                     <div class="open-string string-1-0">O</div>
@@ -78,14 +75,10 @@
                 <div class="fret fret-3"></div>
                 <div class="fret fret-4"></div>
             </div>
-
         </section>
 
-
         <section class="select-chord-section wrapper">
-
             <div class="audio-container">
-
                 <div class="form-container">
                     <form action="">
                         <label for="chord">Choose your Chord</label>
@@ -94,12 +87,12 @@
                         </select>
                     </form>
                 </div>
-
+                <!-- The button used to hear the full chord -->
                 <button class="audio-button">
                     &#127928;
                 </button>
             </div>
-
+            <!-- this div containes instructions on how to use the application-->
             <div class="tips-container">
                 <h2 id="page-title">Pro Tips:</h2>
                 <ul>
@@ -111,36 +104,24 @@
                         individual notes of the chord.
                     </li>
                 </ul>
-
-
             </div>
         </section>
 
+        <!-- This section is strictly for accessibility  -->
         <section class="sr-only" aria-live="polite">
             <div>
                 <!-- Chord descriptions for screen reader are dynamically entered through JS once a chord is selected. -->
-                <p lang="en"><span></span>sixth string open, fifth string second finger second fret, fourth string third
-                    finger
-                    second fret,
-                    third string first finger first fret, second string open, first string open.
+                <p class="chord-description">
                 </p>
             </div>
-
-
         </section>
-
     </main>
-
-
-
 
     <footer>
         <div class="wrapper">
             <p>Copyright &#169; 2020 Adam Batstone | Created at <a href="https://junocollege.com/">Juno College</a></p>
         </div>
     </footer>
-
-
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
