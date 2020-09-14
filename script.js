@@ -383,6 +383,32 @@ guitarApp.stringAudio = (string) => {
     noteAudio.setAttribute('src', string);
 };
 
+// guitarApp.stringColor = (string, chordIndex) => {
+//     const stringNum = ((string.slice(-1)) - 1);
+
+//     const originalStringColor = $(string).css('background')
+
+//     if (guitarApp.chordData[chordIndex].openStrings[stringNum] !== -1) {
+
+//         $(string).css('background', '#449DD1')
+
+//         setTimeout(() => {
+//             $(string).css('background', originalStringColor)
+//         }, 200)
+
+// } else if (guitarApp.chordData[chordIndex].openStrings[stringNum] === -1) {
+
+//     $(string).css('background', 'red')
+
+//     setTimeout(() => {
+//         $(string).css('background', originalStringColor)
+//     }, 200)
+
+// }
+
+//     };
+// };
+
 guitarApp.stringColor = (string, chordIndex) => {
     const stringNum = ((string.slice(-1)) - 1);
 
@@ -397,6 +423,7 @@ guitarApp.stringColor = (string, chordIndex) => {
         }, 300)
     };
 };
+
 
 guitarApp.init = () => {
     // Calling the populateForm function to populate the dropdown menu with all the possible chord choices.
@@ -414,6 +441,8 @@ guitarApp.init = () => {
         const selected = guitarApp.chordData.findIndex((chord) => {
             return chord.chordName.charAt(0).toLowerCase() === String.fromCharCode(e.keyCode)
         });
+
+        console.log($('.string-1').css('height'))
 
         // Using the index number that was matched above, we get the value of the specific chord in the chordData array
         let chordSelected = guitarApp.chordData[selected].chordName;
@@ -437,7 +466,6 @@ guitarApp.init = () => {
 
         // Creating an event listener on each string, using the guitarStrings array of class names, then calling the audio file for each string
         guitarStrings.forEach((string, index) => {
-
             $(string).on('mouseenter', function (e) {
                 guitarApp.stringColor(string, chordIndex)
                 guitarApp.stringAudio(guitarApp.chordData[chordIndex].stringAudio[index])
@@ -475,6 +503,7 @@ guitarApp.init = () => {
         });
     });
 };
+
 
 // Calling the init function when the docuemnt is ready!!!
 $(function () {
