@@ -4,11 +4,6 @@ const guitarApp = {}
 // Array of chords with specified fingerings for each string
 guitarApp.chordData = [
     {
-        chordName: 'Tuning',
-        fingering: [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]],
-        openStrings: [0, 0, 0, 0, 0, 0]
-    },
-    {
         chordName: 'E major',
         // Each nested array represnts a string with four frets. The index of each array indicates the fret, and the number inside indicates which left hand finger should be used in that fret. The first nested array is the first (highest) string, the last is the sixth (lowest) string
         fingering: [[0, 0, 0, 0], [0, 0, 0, 0], [1, 0, 0, 0], [0, 3, 0, 0], [0, 2, 0, 0], [0, 0, 0, 0]],
@@ -474,7 +469,7 @@ guitarApp.init = () => {
     };
 
     $(document).keypress(function (e) {
-        // This allows the user to press a key ie. 'g' on the keyboard to trigger different chords. It takes the keycode of each keypress, converts it to a string and matches its index with a value in the chordData array.
+        // This allows the user to press a key ie. 'g' on the keyboard to trigger different chords. It takes the keycode of each keypress, converts it to a string and matches its index with a value in the chordData array. This currently only works for major chords, I will be implementing a means to select more advanced chords in the future.
         const selected = guitarApp.chordData.findIndex((chord) => {
             return chord.chordName.charAt(0).toLowerCase() === String.fromCharCode(e.keyCode)
         });
