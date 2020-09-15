@@ -297,7 +297,7 @@ guitarApp.chordData = [
         chordName: 'F# major',
         fingering: [[0, 1, 0, 0], [0, 1, 0, 0], [0, 0, 2, 0], [0, 0, 0, 4], [0, 0, 0, 3], [0, 1, 0, 0]],
         openStrings: [1, 1, 1, 1, 1, 1],
-        chordAudio: './audio/chords/F#major.mp3',
+        chordAudio: './audio/chords/Fsharpmajor.mp3',
         stringAudio: ['./audio/notes/Fsharp-1.mp3', './audio/notes/Csharp-2.mp3', './audio/notes/Asharp-3.mp3', './audio/notes/Fsharp-4.mp3', './audio/notes/Csharp-5.mp3', './audio/notes/Fsharp-6.mp3'],
         chordDescription: 'sixth string first finger second fret, fifth string third finger fourth fret, fourth string fourth finger fourth fret, third string second finger third fret, second string first finger second fret, first string second finger second fret'
     },
@@ -305,7 +305,7 @@ guitarApp.chordData = [
         chordName: 'F# minor',
         fingering: [[0, 1, 0, 0], [0, 1, 0, 0], [0, 1, 0, 0], [0, 0, 0, 4], [0, 0, 0, 3], [0, 1, 0, 0]],
         openStrings: [1, 1, 1, 1, 1, 1],
-        chordAudio: './audio/chords/F#minor.mp3',
+        chordAudio: './audio/chords/Fsharpminor.mp3',
         stringAudio: ['./audio/notes/Fsharp-1.mp3', './audio/notes/Csharp-2.mp3', './audio/notes/A-3.mp3', './audio/notes/Fsharp-4.mp3', './audio/notes/Csharp-5.mp3', './audio/notes/Fsharp-6.mp3'],
         chordDescription: 'sixth string first finger second fret, fifth string third finger fourth fret, fourth string fourth finger fourth fret, third string first finger second fret, second string first finger second fret, first string second finger second fret'
     },
@@ -321,7 +321,7 @@ guitarApp.chordData = [
         chordName: 'F#7',
         fingering: [[0, 1, 0, 0], [0, 1, 0, 0], [0, 0, 2, 0], [0, 1, 0, 0], [0, 0, 0, 3], [0, 1, 0, 0]],
         openStrings: [1, 1, 1, 1, 1, 1],
-        chordAudio: './audio/chords/F#7.mp3',
+        chordAudio: './audio/chords/Fsharp7.mp3',
         stringAudio: ['./audio/notes/Fsharp-1.mp3', './audio/notes/Csharp-2.mp3', './audio/notes/Asharp-3.mp3', './audio/notes/E-4.mp3', './audio/notes/Csharp-5.mp3', './audio/notes/Fsharp-6.mp3'],
         chordDescription: 'sixth string first finger second fret, fifth string third finger fourth fret, fourth string first finger second fret, third string second finger third fret, second string first finger second fret, first string second finger second fret'
     },
@@ -329,7 +329,7 @@ guitarApp.chordData = [
         chordName: 'F# minor7',
         fingering: [[0, 1, 0, 0], [0, 1, 0, 0], [0, 1, 0, 0], [0, 1, 0, 0], [0, 0, 0, 3], [0, 1, 0, 0]],
         openStrings: [1, 1, 1, 1, 1, 1],
-        chordAudio: './audio/chords/F#minor7.mp3',
+        chordAudio: './audio/chords/Fsharpminor7.mp3',
         stringAudio: ['./audio/notes/Fsharp-1.mp3', './audio/notes/Csharp-2.mp3', './audio/notes/A-3.mp3', './audio/notes/E-4.mp3', './audio/notes/Csharp-5.mp3', './audio/notes/Fsharp-6.mp3'],
         chordDescription: 'sixth string first finger second fret, fifth string third finger fourth fret, fourth string first finger second fret, third string first finger second fret, second string first finger second fret, first string second finger second fret'
     },
