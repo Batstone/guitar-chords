@@ -388,7 +388,7 @@ guitarApp.fingersOnDOM = (chord) => {
     });
 };
 
-// These two variables are initalized as an empty string and are then redefined insie the ChordAudio and StringAudio functions as new Audio() objects.
+// These two variables are initalized as an empty string and are then redefined inside the ChordAudio and StringAudio functions as new Audio() objects.
 guitarApp.strumAudio = ''
 guitarApp.noteAudio = ''
 
