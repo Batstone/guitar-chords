@@ -456,7 +456,6 @@ guitarApp.accessibilityText = (chord) => {
     $('.chord-description').text(`${chordName}: ${chordText}`)
 }
 
-
 guitarApp.init = () => {
     // Calling the populateForm function to populate the dropdown menu with all the possible chord choices.
     guitarApp.populateForm();
