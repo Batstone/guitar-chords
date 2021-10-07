@@ -288,10 +288,10 @@ html {
     margin-bottom: 20px;
   }
   main ul li:first-child {
-    margin: 0;
+    margin: 50px 0;
   }
   main ul li {
-    margin-top: 20px;
+    margin-top: 50px;
     margin-left: 0px;
   }
 }
@@ -303,9 +303,16 @@ html {
 }
 
 body {
-  font-family: 'Cardo', serif;
-  background: -webkit-gradient(linear, left top, left bottom, from(#9adaff), color-stop(#e9e7e7), to(#449DD1));
-  background: linear-gradient(#9adaff, #e9e7e7, #449DD1);
+  font-family: 'Caudex', serif;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(3, 3, 3, 0.753))), url(../../assets/images/guitars.jpg);
+  background-image: linear-gradient(rgba(3, 3, 3, 0.753)), url(../../assets/images/guitars.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+main {
+  height: 90vh;
 }
 
 h2 {
@@ -320,34 +327,21 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-header h1 {
-  color: black;
-  font-family: 'Oswald', sans-serif;
-  font-size: calc(2rem + 2vw);
-  margin: 50px 0 80px;
-  position: relative;
-  z-index: 0;
-}
-
-header h1::after {
-  content: '\01D11E';
-  color: #ff8717;
-  display: inline-block;
-  position: absolute;
-  font-size: calc(4rem + 4vw);
-  font-weight: bold;
-  -webkit-transform: rotate(28deg);
-          transform: rotate(28deg);
-  left: 90%;
-  top: -70%;
-  z-index: -1;
+  margin-top: 150px;
 }
 
 .wrapper {
   max-width: 1080px;
   margin: 0 auto;
+}
+
+.logo-container {
+  width: 600px;
+  margin-bottom: 50px;
+}
+
+.logo-container img {
+  width: 100%;
 }
 
 .open-strings-container {
@@ -599,7 +593,7 @@ form label {
 }
 
 ul {
-  font-size: calc(.8rem + .8vw);
+  font-size: calc(1rem + 1vw);
   line-height: calc(1.3rem + 1.3vw);
 }
 
@@ -644,7 +638,7 @@ footer {
   color: #fcaa11;
   background-color: black;
   padding: 10px;
-  margin: 600px auto 0 auto;
+  margin: 0 auto;
   text-align: center;
 }
 
