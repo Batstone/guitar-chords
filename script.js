@@ -47,7 +47,7 @@ guitarApp.chordData = [
     {
         chordName: 'E minor7',
         fingering: [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 1, 0, 0], [0, 0, 0, 0]],
-        openStrings: [0, 0, 0, 0, 0, 0],
+        openStrings: [0, 0, 0, 0, 1, 0],
         chordAudio: './audio/chords/Eminor7.mp3',
         stringAudio: ['./audio/notes/E-1.mp3', './audio/notes/B-2.mp3', './audio/notes/G-3.mp3', './audio/notes/D-4.mp3', './audio/notes/B-5.mp3', './audio/notes/E-6.mp3'],
         chordDescription: 'sixth string open, fifth string second finger second fret, fourth string open, third string open, second string open, first string open'
@@ -370,7 +370,7 @@ guitarApp.fingersOnDOM = (chord) => {
 
     // Clearing the open string indications.
     chord.openStrings.forEach((note, index) => {
-        $(`.string-${index + 1}-0`).css({ 'visibility': 'hidden', 'color': 'black' });
+        $(`.string-${index + 1}-0`).css({ 'visibility': 'hidden', 'color': 'white' });
     });
 
     // Calling the fingerInput function for each string.
