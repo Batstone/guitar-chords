@@ -241,6 +241,12 @@ html {
   padding: 0;
 }
 
+@media (max-width: 1250px) {
+  main {
+    height: 90vh;
+  }
+}
+
 @media (max-width: 625px) {
   main .select-chord-section {
     -webkit-box-orient: vertical;
@@ -309,10 +315,6 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   color: white;
-}
-
-main {
-  height: 90vh;
 }
 
 h2 {
