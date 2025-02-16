@@ -1,3 +1,4 @@
+@charset "UTF-8";
 a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
   margin: 0;
   padding: 0;
@@ -24,7 +25,7 @@ blockquote, q {
 }
 
 blockquote:after, blockquote:before, q:after, q:before {
-  content: '';
+  content: "";
   content: none;
 }
 
@@ -95,7 +96,7 @@ form {
 fieldset {
   border: 1px solid silver;
   margin: 0 2px;
-  padding: .35em .625em .75em;
+  padding: 0.35em 0.625em 0.75em;
 }
 
 legend {
@@ -187,17 +188,17 @@ textarea {
 }
 
 .chromeframe {
-  margin: .2em 0;
+  margin: 0.2em 0;
   background: #ccc;
   color: #000;
-  padding: .2em 0;
+  padding: 0.2em 0;
 }
 
 .clearfix:after {
   visibility: hidden;
   display: block;
   font-size: 0;
-  content: '';
+  content: "";
   clear: both;
   height: 0;
 }
@@ -246,7 +247,6 @@ html {
     height: 90vh;
   }
 }
-
 @media (max-width: 625px) {
   main .select-chord-section {
     -webkit-box-orient: vertical;
@@ -301,17 +301,15 @@ html {
     margin-left: 0px;
   }
 }
-
 @media (max-width: 480px) {
   main .open-strings-container {
     left: -20px;
   }
 }
-
 body {
-  font-family: 'Caudex', serif;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(3, 3, 3, 0.596))), url(../assets/images/guitars.jpg);
-  background-image: linear-gradient(rgba(3, 3, 3, 0.596)), url(../assets/images/guitars.jpg);
+  font-family: "Caudex", serif;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(3, 3, 3, 0.693))), url(../assets/images/guitars.jpg);
+  background-image: linear-gradient(rgba(3, 3, 3, 0.693)), url(../assets/images/guitars.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   color: white;
@@ -341,7 +339,6 @@ header {
   width: 600px;
   margin-bottom: 50px;
 }
-
 .logo-container img {
   width: 100%;
 }
@@ -360,12 +357,10 @@ header {
   height: calc(11.5rem + 11.5vw);
   left: -30px;
 }
-
 .open-strings-container .open-string {
-  font-size: calc(.9rem + .9vw);
+  font-size: calc(0.9rem + 0.9vw);
   font-weight: bold;
 }
-
 .open-strings-container .string-1-0,
 .open-strings-container .string-2-0,
 .open-strings-container .string-3-0,
@@ -386,13 +381,13 @@ header {
   margin: 0 auto;
   width: 85%;
   height: calc(11.5rem + 11.5vw);
-  background: radial-gradient(at center, #fce4b7, #ffcd6f);
-  -webkit-box-shadow: inset 10px 10px 100px 20px #fcaa11, inset -10px -10px 100px 20px #fcaa11;
-          box-shadow: inset 10px 10px 100px 20px #fcaa11, inset -10px -10px 100px 20px #fcaa11;
+  background: radial-gradient(at center, rgb(252, 228, 183), rgb(255, 205, 111));
+  -webkit-box-shadow: inset 10px 10px 100px 20px rgb(252, 170, 17), inset -10px -10px 100px 20px rgb(252, 170, 17);
+          box-shadow: inset 10px 10px 100px 20px rgb(252, 170, 17), inset -10px -10px 100px 20px rgb(252, 170, 17);
 }
 
 .fret {
-  background: radial-gradient(closest-side, #999595, #202020);
+  background: radial-gradient(closest-side, rgb(153, 149, 149), rgb(32, 32, 32));
   -webkit-box-shadow: 3px 0px rgba(0, 0, 0, 0.5);
           box-shadow: 3px 0px rgba(0, 0, 0, 0.5);
   width: 2%;
@@ -430,15 +425,14 @@ header {
 }
 
 .string-1 {
-  height: calc(.13rem + .13vw);
+  height: calc(0.13rem + 0.13vw);
   background: black;
 }
-
 .string-1 .string-1-1,
 .string-1 .string-1-2,
 .string-1 .string-1-3,
 .string-1 .string-1-4 {
-  color: white;
+  color: rgb(255, 255, 255);
   background-color: black;
   padding: 7px 10px;
   border-radius: 50%;
@@ -448,15 +442,14 @@ header {
 }
 
 .string-2 {
-  height: calc(.14rem + .14vw);
+  height: calc(0.14rem + 0.14vw);
   background: black;
 }
-
 .string-2 .string-2-1,
 .string-2 .string-2-2,
 .string-2 .string-2-3,
 .string-2 .string-2-4 {
-  color: white;
+  color: rgb(255, 255, 255);
   background-color: black;
   padding: 7px 10px;
   border-radius: 50%;
@@ -466,15 +459,14 @@ header {
 }
 
 .string-3 {
-  height: calc(.19rem + .19vw);
+  height: calc(0.19rem + 0.19vw);
   background: black;
 }
-
 .string-3 .string-3-1,
 .string-3 .string-3-2,
 .string-3 .string-3-3,
 .string-3 .string-3-4 {
-  color: white;
+  color: rgb(255, 255, 255);
   background-color: black;
   padding: 7px 10px;
   border-radius: 50%;
@@ -484,15 +476,14 @@ header {
 }
 
 .string-4 {
-  height: calc(.2rem + .2vw);
+  height: calc(0.2rem + 0.2vw);
   background: black;
 }
-
 .string-4 .string-4-1,
 .string-4 .string-4-2,
 .string-4 .string-4-3,
 .string-4 .string-4-4 {
-  color: white;
+  color: rgb(255, 255, 255);
   background-color: black;
   padding: 7px 10px;
   border-radius: 50%;
@@ -502,15 +493,14 @@ header {
 }
 
 .string-5 {
-  height: calc(.25rem + .25vw);
+  height: calc(0.25rem + 0.25vw);
   background: black;
 }
-
 .string-5 .string-5-1,
 .string-5 .string-5-2,
 .string-5 .string-5-3,
 .string-5 .string-5-4 {
-  color: white;
+  color: rgb(255, 255, 255);
   background-color: black;
   padding: 7px 10px;
   border-radius: 50%;
@@ -520,15 +510,14 @@ header {
 }
 
 .string-6 {
-  height: calc(.32rem + .32vw);
+  height: calc(0.32rem + 0.32vw);
   background: black;
 }
-
 .string-6 .string-6-1,
 .string-6 .string-6-2,
 .string-6 .string-6-3,
 .string-6 .string-6-4 {
-  color: white;
+  color: rgb(255, 255, 255);
   background-color: black;
   padding: 7px 10px;
   border-radius: 50%;
@@ -570,7 +559,6 @@ form {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-
 form label {
   font-size: calc(1.5rem + 1.5vw);
   font-weight: bold;
@@ -595,64 +583,54 @@ form label {
 }
 
 ul {
-  font-size: calc(1rem + 1vw);
-  line-height: calc(1.3rem + 1.3vw);
+  font-size: 2rem;
+  line-height: 1.2em;
 }
-
 ul li:first-child {
-  margin: 20px 0 20px 50px;
+  margin: 20px 0 50px 50px;
 }
-
 ul li {
   margin-left: 50px;
 }
-
 ul li::before {
-  content: '\01F3BC';
+  content: "🎼";
   font-size: calc(1.3rem + 1.3vw);
 }
 
 .audio-button {
-  background-color: #e6e2de;
-  font-size: calc(1.3rem + 1.3vw);
+  background-color: rgb(230, 226, 222);
+  font-size: 2rem;
   width: calc(6rem + 6vw);
   height: calc(6rem + 6vw);
   margin: 30px;
   border-radius: 20%;
   border: 5px solid black;
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
-
 .audio-button:hover {
-  border: 5px solid #ff8717;
+  border: 5px solid rgb(255, 135, 23);
 }
-
 .audio-button:focus {
-  border: 5px solid #ff8717;
+  border: 5px solid rgb(255, 135, 23);
 }
-
 .audio-button:active {
-  background: radial-gradient(at center, white, #3a3a3a);
+  background: radial-gradient(at center, rgb(255, 255, 255), rgb(58, 58, 58));
 }
 
 footer {
-  color: #fcaa11;
-  background-color: black;
+  color: rgb(252, 170, 17);
+  background-color: rgb(0, 0, 0);
   padding: 10px;
   margin: 0 auto;
   text-align: center;
 }
-
 footer a {
   color: white;
-  text-decoration: none;
 }
-
 footer a:hover {
-  color: #fcaa11;
+  color: rgb(252, 170, 17);
 }
-
 footer a:focus {
-  color: #fcaa11;
+  color: rgb(252, 170, 17);
 }
